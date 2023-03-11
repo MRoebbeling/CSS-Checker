@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/screen.css">
+        <script src="components/account-screen.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.umd.js"></script>
+        <!--<script src="components/apicalls.js"></script>-->
+    </head>
+    <body>
+        <div class="modal" id="loadmodal">
+            <img src="./assets/ffinance-logo3.svg" width="50%" class="modalcenter">
+        </div>
+        <div class="wrapper">
+            <div class="sidebar" id="sidebar">
+                <div class="Header">
+                    <div class="Header-logo">
+                        <img src="./assets/ffinance-logo3.svg">
+                    </div> 
+                    <div class="Header-description">
+                        <p><span class="Header-description-name" id='portfolioname'>Name</span></p>
+                        <p><span class="Header-description-portfolio">Portfolio</span></p>
+                        <p><span class="Header-description-date">
+                            <script>
+                                date = new Date().toLocaleDateString();
+                                document.write(date);
+                            </script>
+                        </span></p>
+                        <p><span class="describe-style-account">Investiert:</span></p>
+                        <p><span class="invest-style" id="invest">25.783 &euro;</span></p>
+                        <p><span class="describe-style-account">Gewinn/Verlust:</span></p>
+                        <p><span class="profit-style" id="reven">35.783 &euro;</span></p>
+                        <p><span class="percent-style" id="Percentage">+34%</span></p>
+                    </div> 
+                </div>
+                <div class="Assets" id="assets"> 
+                    <div class="assets-col1">
+                        <p><span class="asset-col1-assetname" id="assetName">>Name</span></p>
+                    </div>
+                    <div class="assets-col3">
+                        <p><span class="asset-col3-percdif" id="assetPerc">+999%</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="assetWrapper" id="assetWrapper">
+                <div class="assetWrapper-item-2col">   
+                    <div class="totalChart">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="Account-line3">
+                        <p id="ychart" onclick="updateChart('year')">Year</p>
+                        <p id="mchart" onclick="updateChart('month')">Month</p>
+                        <p id="wchart" onclick="updateChart('week')">Week</p>
+                    </div>
+                </div>
+                <div class="assetWrapper-item-1col" id="single-asset-window">
+                    <div class="AssetName">
+                        <p><span class="asset-assetname" id="singleAssetName">Name</span></p>
+                    </div>
+                    <div class="Asset-info">
+                        <div class="AssetInfoLine1">
+                            <div class="asset-left">
+                                <p class="describe-style"><span class="describe-style">Average price:</span></p>
+                                <p><span class="invest-style" id="average-price">00.000 &euro;</span></p>
+                                <p><span class="describe-style">Total investment:</span></p>
+                                <p><span class="invest-style" id="total-invest">00.000 &euro;</span></p>
+                                <p><span class="describe-style">Total revenue:</span></p>
+                                <p><span class="invest-style" id="total-revenue">00.000 &euro;</span></p>
+                            </div>
+                            <div class="asset-right">
+                                <p><span class="describe-style">last price:</span></p>
+                                <p><span class="invest-style" id="last-price">00.000 &euro;</span></p>
+                                <p><span class="describe-style">Total asset change: </span></p>
+                                <p><span class="percent-style" id="singlePercentage">+00%</span></p>
+                            </div>
+                        </div>
+                        <div class="AssetChart">
+                            <canvas id="singlechart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </body>
+</html>

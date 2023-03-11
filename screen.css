@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+/* General designs */
+
+html, body {
+    background: #262E46;
+    background-image: url("../assets/background.png"); /* fallback */
+    background-image: url("../assets/background.png"), linear-gradient(#404868, #262E46); /* W3C */
+    margin: 0px;
+    padding: 0px;
+}
+
+.modal {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: block;
+    background-image: url("../assets/background.png"), linear-gradient(#404868, #262E46); /* W3C */
+}
+
+.modalcenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    height: 100vh;
+  }
+
+
+
+
+
+
+/* Login Frame Design */
+
+.loginLogo {
+    height: 15vw;
+    padding: 20vw;
+}
+
+.loginFrame {
+    height: 0 vw;
+    background-color: black;
+    border-radius: 5vw;
+    margin: 0vw 10vw 0vw 10vw;
+    padding: 0vw 5vw 5vw 5vw;
+    opacity: 0.5;
+    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+input {
+    margin: 10vw 0vw 1vw 0vw;
+    padding: 1vw;
+    width: 70vw;
+    border: none;
+    background-color: #000000;
+    border-bottom: 1px solid #C4C4C4;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6.5VW;
+    line-height: 2VW;
+    letter-spacing: 0.5vw;
+    color: #C4C4C4;
+}
+
+.con-center {
+    padding: 10vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12vw;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+@media only screen and (orientation: landscape) {
+    .loginLogo {
+        height: 3vw;
+        padding: 4vw;
+    }
+
+    .loginFrame {
+        margin: 10vw 40vw 0vw 40vw;
+        padding: 0vw 3vw 3vw 3vw;
+        border-radius: 2vw;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 10%;
+    }
+
+    input {
+        font-size: 0.8vw;
+        line-height: .5VW;
+        letter-spacing: 0.1vw;
+        width: 12vw;
+        margin: 4vw 0vw 0vw 0vw;
+        padding: .5vw;
+    }
+
+    .con-center {
+        width: 3vw;
+        padding: 5vw;
+    }
+
+}
+
+/* ACCOUNTING Screen Page Design */
+
+.wrapper{
+    display: flex;
+}
+
+.assetWrapper {
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+    grid-template-rows: 25vh 25vh 25vh 25vh;
+    gap: 1vw;
+    padding: 10px;
+}
+
+.assetWrapper-item-2col {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    background-color: rgba(200, 200, 200, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 1vw;
+    padding: 20px;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.totalChart {
+    height: 18vh;
+    width: 100%;
+}
+
+
+
+.assetWrapper-item-1col {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 1vw;
+    padding: 0.6vw;
+}
+
+.sidebar {
+    width: 20vw;
+    background-color: rgba(0,0,0, 0.3);
+}
+
+.Header {
+    
+}
+
+.Header-logo {
+   padding: 2vw 6vw 1vw 6vw;
+}
+
+.Header-description {
+    padding: 0vw 1vw 0vw 1vw;
+    text-align: left;
+}   
+
+.Header-description-name {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5VW;
+    line-height: 1VW;
+    letter-spacing: 0.2vw;
+    color: #EE80B3;
+}   
+
+.Header-description-portfolio {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5VW;
+    line-height: 1VW;
+    letter-spacing: 0.2vw;
+    color: #9783E9;
+} 
+
+.Header-description-date {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.5vw;
+    line-height: 3.5vw;
+    letter-spacing: 1vw;
+    color: #C4C4C4;
+} 
+
+@media only screen and (orientation: landscape) {
+    .Header-description-date {
+        font-size: 0.8vw;
+        line-height: 1vw;
+        letter-spacing: .1vw;
+    }
+}
+
+.Account {
+    background: linear-gradient(90deg, rgba(196,196,196, 0.35) 0%, rgba(196,196,196, 0.1) 100%);
+    padding: 4vw 6vw 0vw 6vw;
+}
+
+.Account-line1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0vw;
+    padding: 0vw;
+}
+.Account-line2 {
+    margin: 0vw;
+    padding: 0vw;
+}
+.Account-line3 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0vw;
+    padding: 0vw;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 1vw;
+    letter-spacing: 1vw;
+    color: #C4C4C4;
+}
+
+.account-left{
+    padding: 0vw 3vw 0vw 3vw; 
+    text-align: left;
+    bottom: 0;
+}
+
+.account-right{
+    padding: 0vw 3vw 0vw 3vw; 
+    text-align: right;
+    bottom: 0;
+}
+
+.describe-style{
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.5vw;
+    line-height: 0.5vw;
+    text-align: right;
+    color: #575757;
+}
+
+p.describe-style{
+    padding: 0px; 
+    margin: 0px;
+    text-align: left;
+}
+
+.describe-style-account{
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.6vw;
+    line-height: 1vw;
+    text-align: right;
+    color: #aaaaaa;
+}
+
+.invest-style{
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 0vw;
+    text-align: right;
+    color: #C4C4C4;
+}
+.profit-style{
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    text-align: right;
+    color: #C4C4C4;
+}
+
+.percent-style{
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 1vw;
+    text-align: right;
+    color: #50B1E2;
+}
+
+
+/* Asset Design */
+
+.AssetChart {
+    /*background: rgba(0, 0, 0, 0.4);*/
+    height: 9vh;
+    width: 100%;
+}
+
+.Assets {
+    margin: 0vw;
+    background: rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 0vw 1vw 0vw 1vw;
+    /*box-shadow: 0vw 0vw 3vw 3vw rgba(0, 0, 0, 0.2);*/
+}
+
+.AssetName {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2vw;
+    line-height: 0vw;
+    text-align: left;
+    color: #9783E9;
+}
+
+.asset-assetname {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2vw;
+    line-height: 0vw;
+}
+
+.Asset-info {
+    /*background: linear-gradient(90deg, rgba(196,196,196, 0.35) 0%, rgba(196,196,196, 0.1) 100%);*/
+
+    /*box-shadow: 0vw 0vw 3vw 3vw rgba(0, 0, 0, 0.2);*/
+    
+}
+
+.AssetInfoLine1 {
+    display: flex;
+    justify-content: space-between;
+}
+.AssetInfoLine2 {
+    margin: 0vw;
+    padding: 0vw;
+}
+.AssetInfoLine3 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0vw;
+    padding: 0vw;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 1vw;
+    color: #C4C4C4;
+}
+
+.AssetBottom {
+    margin: 0vw;
+    padding: 0vw;
+}
+
+.asset-left{
+    padding: 0vw 0vw 0vw 0vw; 
+    text-align: left;
+    bottom: 0;
+}
+
+.asset-right{
+    padding: 0vw 0vw 0vw 0vw; 
+    text-align: right;
+    bottom: 0;
+}
+
+.AssetInfoLine1 {
+    
+}
+
+
+
+.assets-col1 {
+    width: 60%;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.asset-col1-assetname {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    text-align: right;
+    color: #9783E9;
+}
+
+
+.assets-col2 {
+    width: 30%;
+    text-align: right;
+}
+
+
+.asset-col2-buyprice {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 1vw;
+    text-align: right;
+    color: #7c7c7c;
+}
+
+.asset-col2-currentprice {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 1vw;
+    text-align: right;
+    color: #C4C4C4;
+}
+
+.assets-col3 {
+    width: 40%;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+
+.asset-col3-percdif {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 1vw;
+    text-align: right;
+    color: #C4C4C4;
+    
+}
+
+.AssetHistoryDesc {
+    margin: 4vw 6vw 0vw 6vw;
+    box-sizing: border-box;
+    border-radius: 1vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0vw 0vw 0vw 0vw;
+    
+}
+
+.assethisdesc-col1 {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 1vw;
+    text-align: left;
+    color: #A3A0A0;
+}
+
+.assethisdesc-col2 {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 1vw;
+    text-align: right;
+    color: #A3A0A0;
+}
+
+.assethisdesc-col3 {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1vw;
+    line-height: 1vw;
+    text-align: right;
+    color: #A3A0A0;
+}
+
+.AssetHistoryInfo {
+    margin: 0vw 1vw 0vw 1vw;
+    box-sizing: border-box;
+    border-radius: 1vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0vw 0vw 0vw 0vw;
+    
+}
+
+.assethisinfo-col1 {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4vw;
+    line-height: 1vw;
+    text-align: left;
+    color: #50B1E2;
+}
+
+.assethisinfo-col2 {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4vw;
+    line-height: 1vw;
+    text-align: right;
+    color: #50B1E2;
+}
+
+.assethisinfo-col3 {
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4vw;
+    line-height: 1vw;
+    text-align: right;
+    color: #50B1E2;
+}
